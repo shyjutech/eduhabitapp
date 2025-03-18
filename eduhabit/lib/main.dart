@@ -1,4 +1,5 @@
 import 'package:eduhabit/routes/app_pages.dart';
+import 'package:eduhabit/themes/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'bindings/auth_binding.dart';
@@ -20,6 +21,9 @@ class MyApp extends StatelessWidget {
       title: 'EduHabit',
       initialRoute: '/login',
       getPages: AppPages.routes,
+      theme: AppThemes.lightTheme,
+      darkTheme: AppThemes.darkTheme,
+      themeMode: ThemeMode.system, // Auto-switch based on system settings
       initialBinding: AuthBinding(),
     );
   }
