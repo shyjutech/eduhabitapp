@@ -1,8 +1,8 @@
-
 import 'package:get/get.dart';
 
 import '../bindings/auth_binding.dart';
 import '../views/login_view.dart';
+import '../views/onboarding_view.dart';
 import 'app_routes.dart';
 
 class AppPages {
@@ -10,6 +10,11 @@ class AppPages {
     GetPage(
       name: '/login',
       page: () => LoginView(),
+      binding: AuthBinding(),
+    ),
+    GetPage(
+      name: '/onboarding',
+      page: () => const OnboardingView(),
       binding: AuthBinding(),
     ),
   ];
