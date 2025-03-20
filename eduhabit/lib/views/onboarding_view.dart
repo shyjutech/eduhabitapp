@@ -45,7 +45,7 @@ class _OnboardingViewState extends State<OnboardingView> {
       );
     } else {
       // Navigate to the main app or perform another action
-      print("Onboarding complete!");
+      // print("Onboarding complete!");
     }
   }
 

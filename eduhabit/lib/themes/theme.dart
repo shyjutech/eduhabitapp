@@ -33,8 +33,8 @@ class AppThemes {
     colorScheme: const ColorScheme.light(
       primary: primaryDefault,
       secondary: secondaryDefault,
-      background: backgroundLight,
-      surface: cardColorLight,
+      surface: backgroundLight, // ✅ Updated from `background` to `surface`
+      onSurface: Colors.black,
       error: errorColor,
       onError: onErrorColor,
       onPrimary: Colors.white,
@@ -107,8 +107,8 @@ class AppThemes {
     colorScheme: const ColorScheme.dark(
       primary: primaryDefault,
       secondary: secondaryDefault,
-      background: backgroundDark,
-      surface: cardColorDark,
+      surface: backgroundDark, // ✅ Updated from `background` to `surface`
+      onSurface: Colors.white,
       error: errorColor,
       onError: onErrorColor,
       onPrimary: Colors.white,
