@@ -24,7 +24,12 @@ class OnBoardingWidget extends StatelessWidget {
             alignment: Alignment.topRight,
             child: TextButton(
               onPressed: () {},
-              child: const Text("Skip"),
+              child: Text(
+                "Skip",
+                style: AppThemes.lightTheme.textTheme.bodyLarge?.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ),
           SvgPicture.asset(
