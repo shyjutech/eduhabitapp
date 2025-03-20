@@ -19,7 +19,9 @@ class CustomExpandedButton extends StatelessWidget {
         width: double.infinity,
         child: ElevatedButton(
           onPressed: onPressed,
-          style: AppThemes.lightTheme.elevatedButtonTheme.style,
+          style: Theme.of(context).brightness == Brightness.light
+              ? AppThemes.lightTheme.elevatedButtonTheme.style
+              : AppThemes.darkTheme.elevatedButtonTheme.style,
           child: Text(
             buttonText,
           ),

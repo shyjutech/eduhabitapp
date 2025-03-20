@@ -26,9 +26,13 @@ class OnBoardingWidget extends StatelessWidget {
               onPressed: () {},
               child: Text(
                 "Skip",
-                style: AppThemes.lightTheme.textTheme.bodyLarge?.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
+                style: Theme.of(context).brightness == Brightness.light
+                    ? AppThemes.lightTheme.textTheme.bodyLarge?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      )
+                    : AppThemes.darkTheme.textTheme.bodyLarge?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
               ),
             ),
           ),
@@ -40,13 +44,17 @@ class OnBoardingWidget extends StatelessWidget {
           const SizedBox(height: 20),
           Text(
             title,
-            style: AppThemes.lightTheme.textTheme.headlineLarge,
+            style: Theme.of(context).brightness == Brightness.light
+                ? AppThemes.lightTheme.textTheme.headlineLarge
+                : AppThemes.darkTheme.textTheme.headlineLarge,
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 10),
           Text(
             description,
-            style: AppThemes.lightTheme.textTheme.bodyLarge,
+            style: Theme.of(context).brightness == Brightness.light
+                ? AppThemes.lightTheme.textTheme.bodyLarge
+                : AppThemes.darkTheme.textTheme.bodyLarge,
             textAlign: TextAlign.center,
           ),
         ],

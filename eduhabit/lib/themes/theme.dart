@@ -141,7 +141,7 @@ class AppThemes {
       ),
       headlineLarge: GoogleFonts.cormorantGaramond(
         fontSize: 32,
-        fontWeight: FontWeight.w400,
+        fontWeight: FontWeight.bold,
         color: Colors.white,
       ),
       bodyLarge: GoogleFonts.montserrat(
