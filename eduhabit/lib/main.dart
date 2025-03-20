@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'bindings/auth_binding.dart';
 
-void main() async{
+void main() async {
   // WidgetsFlutterBinding.ensureInitialized(); // Ensures async functions work in main()
   // await Firebase.initializeApp(); // Initialize Firebase before running the app
 
@@ -19,9 +19,11 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'EduHabit',
-      theme: AppThemes.lightTheme,
       initialRoute: '/onboarding',
       getPages: AppPages.routes,
+      theme: AppThemes.lightTheme,
+      darkTheme: AppThemes.darkTheme,
+      themeMode: ThemeMode.system, // Auto-switch based on system settings
       initialBinding: AuthBinding(),
     );
   }
