@@ -1,3 +1,4 @@
+import 'package:eduhabit/views/auth/login_view_email.dart';
 import 'package:get/get.dart';
 
 import '../bindings/auth_binding.dart';
@@ -17,5 +18,6 @@ class AppPages {
       page: () => const OnboardingView(),
       binding: AuthBinding(),
     ),
+    GetPage(name: '/login', page: () => LoginEmail(), binding: AuthBinding()),
   ];
 }

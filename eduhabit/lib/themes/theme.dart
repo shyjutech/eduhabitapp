@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:google_fonts/google_fonts.dart';
 
 class AppThemes {
@@ -85,9 +86,7 @@ class AppThemes {
       style: ElevatedButton.styleFrom(
         backgroundColor: primaryDefault,
         foregroundColor: Colors.white,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
         textStyle: GoogleFonts.montserrat(
           fontSize: 16,
@@ -159,9 +158,7 @@ class AppThemes {
       style: ElevatedButton.styleFrom(
         backgroundColor: primaryPressed,
         foregroundColor: Colors.white,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
         textStyle: GoogleFonts.montserrat(
           fontSize: 16,
@@ -171,5 +168,48 @@ class AppThemes {
     ),
     cardColor: cardColorDark,
     dividerColor: dividerColor,
+=======
+
+class AppThemes {
+  static final lightTheme = ThemeData(
+    primaryColor: Colors.blue,
+    scaffoldBackgroundColor: Colors.white,
+    brightness: Brightness.light,
+    appBarTheme: AppBarTheme(
+      backgroundColor: Colors.blue,
+      foregroundColor: Colors.white,
+    ),
+    textTheme: const TextTheme(
+      bodyLarge: TextStyle(fontSize: 16, color: Colors.black),
+      bodyMedium: TextStyle(fontSize: 14, color: Colors.black54),
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+      ),
+    ),
+  );
+
+  static final darkTheme = ThemeData(
+    primaryColor: Colors.blueGrey,
+    scaffoldBackgroundColor: Colors.black,
+    brightness: Brightness.dark,
+    appBarTheme: AppBarTheme(
+      backgroundColor: Colors.blueGrey[900],
+      foregroundColor: Colors.white,
+    ),
+    textTheme: const TextTheme(
+      bodyLarge: TextStyle(fontSize: 16, color: Colors.white),
+      bodyMedium: TextStyle(fontSize: 14, color: Colors.white70),
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.blueGrey,
+        foregroundColor: Colors.white,
+      ),
+    ),
+>>>>>>> b9a323de5d2270106c5628a9f4a132c5191ab354
   );
 }
