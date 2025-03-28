@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'EduHabit',
-      initialRoute: '/login',
+      initialRoute: '/onboarding',
       getPages: AppPages.routes,
       theme: AppThemes.lightTheme,
       darkTheme: AppThemes.darkTheme,
