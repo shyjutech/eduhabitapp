@@ -17,23 +17,23 @@ class _OnboardingViewState extends State<OnboardingView> {
     {
       "title": "Build Great Habits, One Day at a Time!",
       "description":
-          "Start your journey towards success with small actions. Track progress.",
+      "Start your journey towards success with small actions. Track progress.",
       "image":
-          "assets/images/Self-reflection 1.svg", // Replace with actual image path
+      "assets/images/Self-reflection 1.svg", // Replace with actual image path
     },
     {
       "title": "Stay Consistent With Streaks",
       "description":
-          "Turn habits into powerful streaks. Stay motivated by tracking your progress.",
+      "Turn habits into powerful streaks. Stay motivated by tracking your progress.",
       "image":
-          "assets/images/Coloring (1) 1.svg", // Replace with actual image path
+      "assets/images/Coloring (1) 1.svg", // Replace with actual image path
     },
     {
       "title": "Never Miss a Habit Again!",
       "description":
-          "Set reminders and get nudges to stay on track. Stay focused without distractions.",
+      "Set reminders and get nudges to stay on track. Stay focused without distractions.",
       "image":
-          "assets/images/Stress relief meditation 1.svg", // Replace with actual image path
+      "assets/images/Stress relief meditation 1.svg", // Replace with actual image path
     },
   ];
 
@@ -45,7 +45,7 @@ class _OnboardingViewState extends State<OnboardingView> {
       );
     } else {
       // Navigate to the main app or perform another action
-      // print("Onboarding complete!");
+      print("Onboarding complete!");
     }
   }
 
@@ -79,7 +79,7 @@ class _OnboardingViewState extends State<OnboardingView> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(
                 onboardingData.length,
-                (index) => Padding(
+                    (index) => Padding(
                   padding: const EdgeInsets.all(4.0),
                   child: Icon(
                     Icons.circle,

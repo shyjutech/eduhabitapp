@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'bindings/auth_binding.dart';
 
-void main() async {
+void main() async{
   // WidgetsFlutterBinding.ensureInitialized(); // Ensures async functions work in main()
   // await Firebase.initializeApp(); // Initialize Firebase before running the app
 

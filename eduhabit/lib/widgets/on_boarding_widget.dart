@@ -7,10 +7,10 @@ class OnBoardingWidget extends StatelessWidget {
   final String description;
   final String image;
   const OnBoardingWidget({
-    super.key,
-    required this.title,
-    required this.description,
-    required this.image,
+  super.key,
+  required this.title,
+  required this.description,
+  required this.image,
   });
 
   @override
@@ -24,16 +24,7 @@ class OnBoardingWidget extends StatelessWidget {
             alignment: Alignment.topRight,
             child: TextButton(
               onPressed: () {},
-              child: Text(
-                "Skip",
-                style: Theme.of(context).brightness == Brightness.light
-                    ? AppThemes.lightTheme.textTheme.bodyLarge?.copyWith(
-                        fontWeight: FontWeight.bold,
-                      )
-                    : AppThemes.darkTheme.textTheme.bodyLarge?.copyWith(
-                        fontWeight: FontWeight.bold,
-                      ),
-              ),
+              child: const Text("Skip"),
             ),
           ),
           SvgPicture.asset(
@@ -44,17 +35,13 @@ class OnBoardingWidget extends StatelessWidget {
           const SizedBox(height: 20),
           Text(
             title,
-            style: Theme.of(context).brightness == Brightness.light
-                ? AppThemes.lightTheme.textTheme.headlineLarge
-                : AppThemes.darkTheme.textTheme.headlineLarge,
+            style: AppThemes.lightTheme.textTheme.headlineLarge,
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 10),
           Text(
             description,
-            style: Theme.of(context).brightness == Brightness.light
-                ? AppThemes.lightTheme.textTheme.bodyLarge
-                : AppThemes.darkTheme.textTheme.bodyLarge,
+            style: AppThemes.lightTheme.textTheme.bodyLarge,
             textAlign: TextAlign.center,
           ),
         ],

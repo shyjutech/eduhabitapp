@@ -6,9 +6,9 @@ class CustomExpandedButton extends StatelessWidget {
   final Function()? onPressed;
   final String buttonText;
   const CustomExpandedButton({
-    super.key,
-    this.onPressed,
-    required this.buttonText,
+  super.key,
+  this.onPressed,
+  required this.buttonText,
   });
 
   @override
@@ -19,9 +19,7 @@ class CustomExpandedButton extends StatelessWidget {
         width: double.infinity,
         child: ElevatedButton(
           onPressed: onPressed,
-          style: Theme.of(context).brightness == Brightness.light
-              ? AppThemes.lightTheme.elevatedButtonTheme.style
-              : AppThemes.darkTheme.elevatedButtonTheme.style,
+          style: AppThemes.lightTheme.elevatedButtonTheme.style,
           child: Text(
             buttonText,
           ),
