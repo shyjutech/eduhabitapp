@@ -7,11 +7,6 @@ import 'app_routes.dart';
 
 class AppPages {
   static final routes = [
-    // GetPage(
-    //   name: '/login',
-    //   page: () => LoginView(),
-    //   binding: AuthBinding(),
-    // ),
     GetPage(
       name: '/onboarding',
       page: () => const OnboardingView(),
