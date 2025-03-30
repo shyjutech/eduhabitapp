@@ -19,21 +19,21 @@ class _OnboardingViewState extends State<OnboardingView> {
       "description":
       "Start your journey towards success with small actions. Track progress.",
       "image":
-      "assets/images/Self-reflection 1.svg", // Replace with actual image path
+      "assets/Self-reflection 1.svg", // Replace with actual image path
     },
     {
       "title": "Stay Consistent With Streaks",
       "description":
       "Turn habits into powerful streaks. Stay motivated by tracking your progress.",
       "image":
-      "assets/images/Coloring (1) 1.svg", // Replace with actual image path
+      "assets/Coloring (1) 1.svg", // Replace with actual image path
     },
     {
       "title": "Never Miss a Habit Again!",
       "description":
       "Set reminders and get nudges to stay on track. Stay focused without distractions.",
       "image":
-      "assets/images/Stress relief meditation 1.svg", // Replace with actual image path
+      "assets/Stress relief meditation 1.svg", // Replace with actual image path
     },
   ];
 
