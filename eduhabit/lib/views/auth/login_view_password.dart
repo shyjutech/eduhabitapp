@@ -1,6 +1,11 @@
 import 'package:eduhabit/controllers/auth_controller.dart';
 import 'package:eduhabit/themes/theme.dart';
-import 'package:eduhabit/widgets/loginpageWidgets.dart';
+import 'package:eduhabit/views/auth/login_view_email.dart';
+import 'package:eduhabit/widgets/continue_button.dart';
+import 'package:eduhabit/widgets/custom_textfield.dart';
+import 'package:eduhabit/widgets/google_signup_button.dart';
+import 'package:eduhabit/widgets/signup_or_signin_prompt.dart';
+import 'package:eduhabit/widgets/terms_privacy_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -28,21 +33,7 @@ class _LoginPasswordState extends State<LoginPassword> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      "Skip",
-                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.lightBlue,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              SizedBox(height: 48),
               SvgPicture.asset("assets/logo.svg"),
               //Image.asset("assets/eduhabit.png", cacheHeight: 200),
               SizedBox(height: 20),
@@ -99,7 +90,10 @@ class _LoginPasswordState extends State<LoginPassword> {
               SizedBox(height: 30),
               TermsAndPrivacy(),
               SizedBox(height: 30),
-              SignupPrompt(),
+              SignupSigninPrompt(
+                text1: "Don't have an account? ",
+                text2: "Sign Up",
+              ),
             ],
           ),
         ),
