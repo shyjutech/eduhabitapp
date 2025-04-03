@@ -1,4 +1,5 @@
 import 'package:eduhabit/routes/app_pages.dart';
+import 'package:eduhabit/themes/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'bindings/auth_binding.dart';
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'EduHabit',
-      initialRoute: '/login',
+      initialRoute: '/onboarding',
+      theme: AppTheme.lightTheme,
       getPages: AppPages.routes,
       initialBinding: AuthBinding(),
     );
