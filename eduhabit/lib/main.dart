@@ -3,10 +3,11 @@ import 'package:eduhabit/themes/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'bindings/auth_binding.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 void main() async{
-  // WidgetsFlutterBinding.ensureInitialized(); // Ensures async functions work in main()
-  // await Firebase.initializeApp(); // Initialize Firebase before running the app
+   WidgetsFlutterBinding.ensureInitialized(); // Ensures async functions work in main()
+   await Firebase.initializeApp(); // Initialize Firebase before running the app
 
   runApp(const MyApp());
 }
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'EduHabit',
-      initialRoute: '/onboarding',
+      initialRoute: '/login',
       getPages: AppPages.routes,
       theme: AppThemes.lightTheme,
       darkTheme: AppThemes.darkTheme,
