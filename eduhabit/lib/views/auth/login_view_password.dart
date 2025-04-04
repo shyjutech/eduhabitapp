@@ -11,18 +11,13 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
 
-class LoginPassword extends StatefulWidget {
-  final AuthController authController = Get.put(AuthController());
+class LoginPassword extends StatelessWidget {
+  final AuthController _controller = Get.put(AuthController());
 
   LoginPassword({super.key});
 
-  @override
-  State<LoginPassword> createState() => _LoginPasswordState();
-}
-
-class _LoginPasswordState extends State<LoginPassword> {
-  final TextEditingController passController = TextEditingController();
   final _formKeyPass = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,7 +69,7 @@ class _LoginPasswordState extends State<LoginPassword> {
                 child: CustomTextField(
                   title: "Password",
                   hintText: "Password",
-                  controller: passController,
+                  controller: _controller.passwordController,
                   isPassword: true,
                   validator: (String? value) {
                     return null;
@@ -82,7 +77,7 @@ class _LoginPasswordState extends State<LoginPassword> {
                 ),
               ),
               SizedBox(height: 30),
-              CustomContinueButton(onPressed: () {}),
+              CustomContinueButton(onPressed: () {_controller.login();}),
               SizedBox(height: 20),
               devider(),
               SizedBox(height: 20),
