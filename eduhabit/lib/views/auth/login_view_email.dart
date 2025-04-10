@@ -10,19 +10,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
-class LoginEmail extends StatefulWidget {
-  final AuthController authController = Get.put(AuthController());
-  final TextEditingController emailController = TextEditingController();
+class LoginEmail extends StatelessWidget {
+  final AuthController _controller = Get.put(AuthController());
 
   LoginEmail({super.key});
 
-  @override
-  State<LoginEmail> createState() => _LoginEmailState();
-}
-
-class _LoginEmailState extends State<LoginEmail> {
-  final TextEditingController emailController = TextEditingController();
   final formKeyEmail = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,7 +68,7 @@ class _LoginEmailState extends State<LoginEmail> {
                 CustomTextField(
                   title: "Email",
                   hintText: "Email or Username",
-                  controller: emailController,
+                  controller: _controller.emailController,
                   isPassword: false,
                   validator: (String? value) {
                     if (value == null || value.isEmpty) {
