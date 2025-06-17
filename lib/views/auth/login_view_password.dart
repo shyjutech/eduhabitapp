@@ -15,7 +15,6 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
 
-
 class LoginPassword extends StatelessWidget {
   final AuthController _controller = Get.put(AuthController());
 
@@ -95,20 +94,19 @@ class LoginPassword extends StatelessWidget {
               TermsAndPrivacy(),
               SizedBox(height: 30),
 
-Material(
-  color: Colors.transparent,
-  child: InkWell(
-    onTap: () {
-      print("navigation called");
-      Get.toNamed(Routes.SIGNUP);
-    },
-    child: SignupSigninPrompt(
-      text1: "Don't have an account? ",
-      text2: "Sign Up",
-    ),
-  ),
-)
-
+              Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  onTap: () {
+                    print("navigation called");
+                    Get.toNamed(Routes.SIGNUP);
+                  },
+                  child: SignupSigninPrompt(
+                    text1: "Don't have an account? ",
+                    text2: "Sign Up",
+                  ),
+                ),
+              ),
             ],
           ),
         ),

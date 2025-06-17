@@ -4,10 +4,10 @@ import 'package:eduhabit/utils/strings.dart';
 import 'package:eduhabit/widgets/custom_text.dart';
 import 'package:eduhabit/widgets/custom_textformfield.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';   import 'package:flutter/gestures.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart'; // 👈 Important! Add this import at top
-
 
 class SignupView extends StatefulWidget {
   SignupView({super.key});
@@ -108,7 +108,10 @@ class _SignupViewState extends State<SignupView> {
                   SizedBox(height: screenHeight * 0.03), // 3% of height
                   Row(
                     children: [
-                      Icon(Icons.arrow_back, size: screenWidth * 0.06), // icon size responsive
+                      Icon(
+                        Icons.arrow_back,
+                        size: screenWidth * 0.06,
+                      ), // icon size responsive
                       SizedBox(width: screenWidth * 0.02),
                       CustomText(
                         "Sign Up",
@@ -162,7 +165,10 @@ class _SignupViewState extends State<SignupView> {
                     onPressed: _submitForm,
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppThemes.primaryDefault,
-                      fixedSize: Size(screenWidth, screenHeight * 0.07), // full width button
+                      fixedSize: Size(
+                        screenWidth,
+                        screenHeight * 0.07,
+                      ), // full width button
                     ),
                     child: CustomText(
                       "Sign Up",
@@ -202,35 +208,36 @@ class _SignupViewState extends State<SignupView> {
                     ),
                   ),
                   SizedBox(height: screenHeight * 0.05),
-             
-// Inside your SignupView build method:
-Center(
-  child: RichText(
-    textAlign: TextAlign.center,
-    text: TextSpan(
-      style: TextStyle(
-        color: Colors.black,
-        fontSize: 16,
-      ),
-      children: [
-        TextSpan(text: "Already have an account? "), // 👈 corrected text
-        TextSpan(
-          text: "Sign in",
-          style: TextStyle(
-            color: Colors.lightBlue,
-            fontWeight: FontWeight.bold,
-          ),
-          recognizer: TapGestureRecognizer()
-            ..onTap = () {
-              Get.toNamed(Routes.LOGIN); // 👈 navigate to login
-            },
-        ),
-        TextSpan(text: " here."),
-      ],
-    ),
-  ),
-),
 
+                  // Inside your SignupView build method:
+                  Center(
+                    child: RichText(
+                      textAlign: TextAlign.center,
+                      text: TextSpan(
+                        style: TextStyle(color: Colors.black, fontSize: 16),
+                        children: [
+                          TextSpan(
+                            text: "Already have an account? ",
+                          ), // 👈 corrected text
+                          TextSpan(
+                            text: "Sign in",
+                            style: TextStyle(
+                              color: Colors.lightBlue,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            recognizer:
+                                TapGestureRecognizer()
+                                  ..onTap = () {
+                                    Get.toNamed(
+                                      Routes.LOGIN,
+                                    ); // 👈 navigate to login
+                                  },
+                          ),
+                          TextSpan(text: " here."),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
