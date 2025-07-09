@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter/material.dart';
-
 // Implementing PreferredSizeWidget is crucial for AppBars
 // It tells the Scaffold the height the AppBar wants to occupy.
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -9,12 +7,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final List<Widget>? actions; // Optional actions (like icons on the right)
   final Color? backgroundColor; // Optional custom background color
   final Color? foregroundColor; // Optional custom text/icon color
-final bool showBackButton;
+  final bool showBackButton;
+
   const CustomAppBar({
     Key? key,
     required this.title,
     this.actions,
-      this.showBackButton = true, 
+    this.showBackButton = true,
     this.backgroundColor, // Default will be taken from theme
     this.foregroundColor, // Default will be taken from theme
   }) : super(key: key);
@@ -28,26 +27,42 @@ final bool showBackButton;
       // Use theme's AppBar theme by default, but allow overrides
       backgroundColor: backgroundColor, // Uses theme color if null
       foregroundColor: foregroundColor, // Uses theme color if null
-      elevation: 0, // Common practice for a cleaner look, adjust as needed
+      elevation: 2, // Add slight elevation to make it more visible
       surfaceTintColor: Colors.transparent, // Prevents color tinting on scroll
-
       // --- Leading Back Arrow ---
-      // Show back arrow only if navigation is possible
-      leading: canPop
-          ? IconButton(
-              icon: const Icon(Icons.arrow_back), // Standard back arrow
-              tooltip: MaterialLocalizations.of(context).backButtonTooltip, // Accessibility
-              onPressed: () {
-                // Navigate back when tapped
-                Navigator.pop(context);
-              },
-            )
-          : null, // No leading icon if it's the first screen
-
+      // Show back arrow based on showBackButton parameter AND if navigation is possible
+      leading:
+          (showBackButton && canPop)
+              ? IconButton(
+                icon: const Icon(Icons.arrow_back), // Standard back arrow
+                tooltip:
+                    MaterialLocalizations.of(
+                      context,
+                    ).backButtonTooltip, // Accessibility
+                onPressed: () {
+                  // Navigate back when tapped
+                  Navigator.pop(context);
+                },
+              )
+              : (showBackButton && !canPop)
+              ? IconButton(
+                icon: const Icon(Icons.arrow_back),
+                onPressed: () {
+                  // Force navigation back even if canPop is false
+                  Navigator.of(context).pop();
+                },
+              )
+              : null, // No leading icon if showBackButton is false
       // --- Title ---
-      title: Text(title), // Display the title passed to the widget
+      title: Text(
+        title,
+        style: TextStyle(
+          fontWeight: FontWeight.w600,
+          fontSize: 18,
+          color: foregroundColor,
+        ),
+      ), // Display the title passed to the widget
       centerTitle: false, // Android style (false) or iOS style (true)
-
       // --- Optional Actions ---
       actions: actions, // Add any action widgets if provided
     );

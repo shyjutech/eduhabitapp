@@ -6,9 +6,9 @@ import 'package:get/get.dart';
 import 'bindings/auth_binding.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-void main() async{
-   WidgetsFlutterBinding.ensureInitialized(); // Ensures async functions work in main()
-   await Firebase.initializeApp(); // Initialize Firebase before running the app
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized(); // Ensures async functions work in main()
+  await Firebase.initializeApp(); // Initialize Firebase before running the app
 
   runApp(const MyApp());
 }
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'EduHabit',
-      initialRoute: '/login',
+      initialRoute: '/save_habit',
       getPages: AppPages.routes,
       theme: AppThemes.lightTheme,
       darkTheme: AppThemes.darkTheme,

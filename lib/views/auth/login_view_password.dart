@@ -1,7 +1,5 @@
 import 'package:eduhabit/controllers/auth_controller.dart';
-import 'package:eduhabit/routes/app_pages.dart';
 import 'package:eduhabit/routes/app_routes.dart' show Routes;
-
 import 'package:eduhabit/themes/theme.dart';
 import 'package:eduhabit/views/auth/login_view_email.dart';
 import 'package:eduhabit/widgets/continue_button.dart';
@@ -12,8 +10,7 @@ import 'package:eduhabit/widgets/terms_privacy_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_instance/get_instance.dart';
+
 
 
 class LoginPassword extends StatelessWidget {
