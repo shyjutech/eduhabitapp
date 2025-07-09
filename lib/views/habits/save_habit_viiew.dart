@@ -10,7 +10,7 @@ class SaveHabitViiew extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final String title = "Create Habit";
+    final String title = "Complete Assignment";
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
 
@@ -71,14 +71,16 @@ class SaveHabitViiew extends StatelessWidget {
                     Container(
                       decoration: BoxDecoration(
                         color: cardColor,
-                        border: Border.all(color: primaryColor),
+                        border: Border.all(
+                          color: AppThemes.lightTheme.colorScheme.onPrimary,
+                        ),
                         borderRadius: BorderRadius.circular(
                           containerPadding * 0.8,
                         ),
                         boxShadow: [
                           BoxShadow(
                             color: primaryColor.withOpacity(0.1),
-                            blurRadius: 4,
+                            blurRadius: 8,
                             offset: Offset(0, 2),
                           ),
                         ],
@@ -213,7 +215,9 @@ class SaveHabitViiew extends StatelessWidget {
                         borderRadius: BorderRadius.circular(
                           containerPadding * 0.8,
                         ),
-                        border: Border.all(color: primaryColor),
+                        border: Border.all(
+                          color: AppThemes.lightTheme.colorScheme.onPrimary,
+                        ),
                         boxShadow: [
                           BoxShadow(
                             color: primaryColor.withOpacity(0.1),
@@ -237,7 +241,9 @@ class SaveHabitViiew extends StatelessWidget {
                         borderRadius: BorderRadius.circular(
                           containerPadding * 0.8,
                         ),
-                        border: Border.all(color: primaryColor),
+                        border: Border.all(
+                          color: AppThemes.lightTheme.colorScheme.onPrimary,
+                        ),
                         boxShadow: [
                           BoxShadow(
                             color: primaryColor.withOpacity(0.1),
@@ -299,7 +305,9 @@ class SaveHabitViiew extends StatelessWidget {
                         borderRadius: BorderRadius.circular(
                           containerPadding * 0.8,
                         ),
-                        border: Border.all(color: primaryColor),
+                        border: Border.all(
+                          color: AppThemes.lightTheme.colorScheme.onPrimary,
+                        ),
                         boxShadow: [
                           BoxShadow(
                             color: primaryColor.withOpacity(0.1),
@@ -359,7 +367,7 @@ class SaveHabitViiew extends StatelessWidget {
                             foregroundColor: Colors.white,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(
-                                containerPadding * 0.8,
+                                containerPadding * 2.5,
                               ),
                             ),
                             elevation: 3,
@@ -426,7 +434,7 @@ class SaveHabitViiew extends StatelessWidget {
                           side: BorderSide(color: primaryColor),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(
-                              containerPadding * 0.8,
+                              containerPadding * 2.5,
                             ),
                           ),
                         ),
